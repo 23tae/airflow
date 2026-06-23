@@ -816,6 +816,7 @@ class TestAwsBatchExecutor:
             task.dag_run = mock.Mock()
             task.dag_run.bundle_version = "1.0.0"
             task.dag_run.context_carrier = {}
+            task.hostname = "test_hostname"
 
             if not AIRFLOW_V_3_0_PLUS:
                 task.command_as_list.return_value = [
